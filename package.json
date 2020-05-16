@@ -1,0 +1,27 @@
+{
+  "name": "trivia-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client-watch": "parcel watch ./client/index.html",
+    "server-watch": "nodemon --watch server/* ./server/index.js",
+    "dev": "concurrently --kill-others \"npm run server-watch\" \"npm run client-watch\"",
+    "build": "parcel build ./client/index.html",
+    "start": "npm run build && node server/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3",
+    "parcel-bundler": "^1.12.4"
+  }
+}
